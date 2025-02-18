@@ -1,3 +1,5 @@
+import { isAlphabetical } from '../helpers/utils.js';
+
 export default function capitalize(str) {
 	if (str === undefined || str.length === 0) return '';
 
@@ -11,8 +13,4 @@ export default function capitalize(str) {
 	}
 
 	return str.slice(0, index) + str[index].toUpperCase() + str.slice(index + 1);
-}
-
-function isAlphabetical(char) {
-	return /^[A-Za-z]$/.test(char);
 }
