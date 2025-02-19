@@ -1,4 +1,4 @@
-import { isAlphabetical } from '../helpers/utils.js';
+import { isAlphabetic } from '../helpers/utils.js';
 
 export default function capitalize(str) {
 	if (str === undefined || str.length === 0) return '';
@@ -6,7 +6,7 @@ export default function capitalize(str) {
 	let index = 0;
 
 	for (const [i, c] of [...str].entries()) {
-		if (isAlphabetical(c)) {
+		if (isAlphabetic(c)) {
 			index = i;
 			break;
 		}

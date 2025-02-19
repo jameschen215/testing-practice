@@ -1,3 +1,5 @@
+import { isAllNumber } from '../helpers/utils.js';
+
 export default function analyzeArray(array) {
 	if (arguments.length !== 1) {
 		throw new Error('This function requires only one parameter.');
@@ -29,14 +31,4 @@ export default function analyzeArray(array) {
 	const average = sum / length;
 
 	return { average, length, max, min };
-}
-
-function isAllNumber(array) {
-	for (const num of array) {
-		if (typeof num !== 'number') {
-			return false;
-		}
-	}
-
-	return true;
 }

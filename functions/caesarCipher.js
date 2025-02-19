@@ -1,3 +1,5 @@
+import { isAlphabetic, isInteger } from '../helpers/utils';
+
 export default function caesarCipher(str, key) {
 	if (arguments.length !== 2) {
 		throw new Error('This function needs and only needs two parameters.');
@@ -16,14 +18,6 @@ export default function caesarCipher(str, key) {
 		.split('')
 		.map((char) => (isAlphabetic(char) ? cipher(char, key) : char))
 		.join('');
-}
-
-function isInteger(num) {
-	return Number.isInteger(num);
-}
-
-function isAlphabetic(char) {
-	return /^[A-Za-z]$/.test(char);
 }
 
 function cipher(char, key) {
